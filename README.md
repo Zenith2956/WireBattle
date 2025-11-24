@@ -1,14 +1,14 @@
 # WireBattle
 
-🃏 Bataille — “L’évolution d’un wireframe” 
+🃏 Bataille — “Wireframe evolution” 
 
-Jeu de 13x4 cartes = 54 cartes 
+deck of 13x4 cards = 54 Cards 
 
 2 — Croquis rapide 
-Petit dessin très simple pour poser l’idée. 
+A simple drawing to present the idea. 
 
 3 — Découpage de la page 
-On sépare en haut / milieu / bas. 
+we separate the Up/Middle/Down. 
 
 4 — Placement des blocs 
 On met le menu, le texte, l’image, etc. 
@@ -42,6 +42,10 @@ Les images sont placés et les textes rédigés.
 
 Ace — Prototype simple 
 On peut cliquer et tester comme si c’était une vraie app. 
+
+
+
+
 
  
 
