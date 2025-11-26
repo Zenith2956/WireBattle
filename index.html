@@ -1,364 +1,132 @@
+<!DOCTYPE html>
+
 <html lang="en" data-bs-theme="light">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Arhur Callens, Nathan Duval, Cassandre Chenu, Nolann Deburck">
-    <meta name="generator" content="Astro v5.13.2">
-    <title>WireBattle</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/product/">
-    <script src="/docs/5.3/assets/js/color-modes.js"></script>
-    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        class="astro-vvvwv3sm"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-    <link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB">
-    <link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-    <link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="WireBattle - Fun card game overview">
+<meta name="author" content="Arhur Callens, Nathan Duval, Cassandre Chenu, Nolann Deburck">
+<title>WireBattle</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<style>
+body { font-family: 'Courier New', monospace; margin:0; }
+
+/* Bloc hero */
+.hero {
+color: #fff;
+min-height: 30vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 2rem 1rem;
+}
+.hero a { margin: 0.5rem; width: 45%; max-width: 180px; }
+
+/* Grille cartes */
+#cards-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+gap: 1rem;
+padding: 0 0.5rem 2rem 0.5rem; /* padding bottom ajouté */
+}
+
+.card-preview {
+border-radius: 1rem;
+overflow: hidden;
+height: 180px;
+position: relative;
+cursor: pointer;
+transition: transform 0.2s;
+background-color: #fff;
+}
+.card-preview img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+border-radius: 1rem;
+}
+.card-preview:hover {
+transform: scale(1.03);
+}
+
+/* Centrage du logo dans le hero */
+.hero-logo {
+height: 100px;
+width: auto;
+margin-bottom: 20px;
+} </style>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md sticky-top border-bottom" style="background-color:#c688bb; min-width: 8%;">
-        <div class="container">
-            <a class="navbar-brand d-md-none" href="#">
-                <svg class="bi" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="#aperture"></use>
-                </svg>
-                <img src="image/logow.svg" alt="WireBattle Logo" width="50% ">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
-                aria-controls="offcanvas" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav flex-grow-1 justify-content-center" style="gap: 25%;">
-                        <li class="nav-item p-2">
-                            <a class="nav-link" href="rule.html" style="font-size:130%; color:#eace3b;">Rules</a>
-                        </li>
 
-                        <li class="nav-item p-1">
-                            <a class="nav-link d-md-none" href="index.html"
-                                style="font-size:130%; text-align:left; color:#eace3b;">Home</a>
+<!-- Navigation -->
 
-                            <a class="nav-link d-none d-md-flex justify-content-center align-items-center"
-                                href="index.html" style="padding:0;">
-                                <img src="image/logow.svg" alt="Logo" style="height:60px; width:auto; display:block;">
-                            </a>
-                        </li>
-                        <li class="nav-item p-2">
-                            <a class="nav-link" href="cards.php" style="font-size:130%; color:#eace3b;">Cards</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-body-tertiary">
-            <img src="image/logow.svg" alt="WireBattle Logo" width="60%" class="center">
-            <div class="col-md-6 p-lg-5 mx-auto my-5">
-                <h3 class="fw-normal text-muted mb-3">[insert cool line]</h3>
-                <div class="d-flex gap-3 justify-content-center lead fw-normal">
-                    <a class="icon-link" href="rule.html">
-                        the rules
-                        <svg class="bi" aria-hidden="true">
-                            <use xlink:href="#chevron-right"></use>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div class="product-device shadow-sm d-none d-md-block"></div>
-            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
-        </div>
-        <div class="w-100 my-md-3 ps-md-3 row">
+<nav class="navbar sticky-top border-bottom" style="background-color:#c688bb;">
+    <div class="container d-flex justify-content-center align-items-center">
+        <a class="navbar-brand" href="index.html">
+            <img src="image/logow.svg" alt="WireBattle Logo" style="height:50px;">
+        </a>
+    </div>
+</nav>
 
-            <div class="col text-center overflow-hidden ms-2 me-1" style="background-color: #71b62e;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">2 — Quick sketch</h2>
-                </div>
-                <p class="lead">A simple drawing to present the idea.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-            <div class="col text-center overflow-hidden ms-1 me-1" style="background-color: #71b62e;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">3 — Page breakdown</h2>
-                </div>
-                <p class="lead">We separate the Top/Middle/Bottom.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-            <div class="col text-center overflow-hidden ms-1 me-2" style="background-color: #71b62e;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">4 — Block placement</h2>
-                </div>
-                <p class="lead">We place the menu, text, image, etc.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
+<main>
+    <!-- Hero -->
+    <section class="hero">
+        <img src="image/logow.svg" alt="WireBattle Logo" class="hero-logo">
+        <div class="d-flex justify-content-center flex-wrap">
+            <a href="rule.html" class="btn btn-warning text-dark">View Rules</a>
+            <a href="cards.php" class="btn btn-light text-dark">View Cards</a>
         </div>
-        <div class="w-100 my-md-3 ps-md-3 row">
-            <div class="col text-center overflow-hidden ms-2 me-1" style="background-color: #71b62e;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">5 — Adding columns</h2>
-                    <br>
-                </div>
-                <p class="lead">Setting up a more organized structure.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-            <div class="col text-center overflow-hidden ms-2 me-1" style="background-color: #26a09b;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">6 — Adding buttons and links</h2>
-                </div>
-                <p class="lead">We show where the user can click.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-            <div class="col text-center overflow-hidden ms-2 me-1" style="background-color: #26a09b;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">7 — Adding placeholder images</h2>
-                </div>
-                <p class="lead">Grey boxes to represent photos.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-        </div>
-        <div class="w-100 my-md-3 ps-md-3 row">
-            <div class="col text-center overflow-hidden ms-2 me-1" style="background-color: #26a09b;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">8 — Simple text and headings</h2>
-                </div>
-                <p class="lead">We add real titles and placeholder text.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-            <div class="col text-center overflow-hidden ms-2 me-1" style="background-color: #26a09b;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">9 — Information organization</h2>
-                </div>
-                <p class="lead">Everything is better arranged and clearer.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-            <div class="col text-center overflow-hidden ms-2 me-1" style="background-color: #26a09b;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">10 — Mobile version (responsive)</h2>
-                </div>
-                <p class="lead">We adapt the page for small screens.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-        </div>
-        <div class="row w-100 my-md-3 ps-md-3">
-            <div class="col text-center overflow-hidden ms-2 me-1" style="background-color: #d05251;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">Jack — Clean alignments and spacing</h2>
-                </div>
-                <p class="lead">The wireframe becomes cleaner and more readable.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-            <div class="col text-center overflow-hidden ms-2 me-1" style="background-color: #d05251;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">Queen — Click path (simple flow)</h2>
-                </div>
-                <p class="lead">We show how the user navigates between pages.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-            <div class="col text-center overflow-hidden ms-2 me-1" style="background-color: #d05251;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">King — Realistic mockup</h2>
-                </div>
-                <p class="lead">Images are placed and the texts are written.</p>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-        </div>
-        <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center" style="width: 50%;">
-            <div class="text-center overflow-hidden ms-2 me-1" style="background-color: #d05251;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">Ace — Simple prototype</h2>
-                    <p class="lead">You can click and test it as if it were a real app.</p>
-                </div>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-        </div>
-                <div class="w-100 my-md-3 ps-md-3 row">
+    </section>
 
-        <div class="col d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center" style="width: 50%;">
-            <div class="text-center overflow-hidden ms-2 me-1" style="background-color: #d05251;">
-                <div class="my-3 p-3">
-                    <h2 class="display-5">Ace — Simple prototype</h2>
-                    <p class="lead">You can click and test it as if it were a real app.</p>
-                </div>
-                <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                </div>
-            </div>
-            <div class="col d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center" style="width: 50%;">
-                <div class="text-center overflow-hidden ms-2 me-1" style="background-color: #d05251;">
-                    <div class="my-3 p-3">
-                        <h2 class="display-5">Ace — Simple prototype</h2>
-                        <p class="lead">You can click and test it as if it were a real app.</p>
-                    </div>
-                    <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                    </div>
-                </div>
-                <div class="col d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center"
-                    style="width: 50%;">
-                    <div class="text-center overflow-hidden ms-2 me-1" style="background-color: #d05251;">
-                        <div class="my-3 p-3">
-                            <h2 class="display-5">Ace — Simple prototype</h2>
-                            <p class="lead">You can click and test it as if it were a real app.</p>
-                        </div>
-                        <div class="bg-warning shadow-sm mx-auto" style="
-        width: 80%; 
-        height: 100%; 
-        min-height: 300px;
-        border-radius: 21px 21px 0 0;
-        background-image: url('image/cards/carte_test.png');
-        background-size: 100% 100%;
-        background-position: center;
-        background-repeat: no-repeat;">
-                        </div>
-                    </div>
-                </div>
-    </main>
-    <footer class="container py-5">
-    </footer>
+
+<!-- Grille cartes -->
+<section class="container my-4" id="cards-container"></section>
+
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<script>
+const cardsData = [
+    { src: "image/cards/carte_2.svg", cardParam: "Quick_sketch" },
+    { src: "image/cards/carte_3.svg", cardParam: "Page_breakdown" },
+    { src: "image/cards/carte_4.svg", cardParam: "Block_placement" },
+    { src: "image/cards/carte_5.svg", cardParam: "Adding_columns" },
+    { src: "image/cards/carte_6.svg", cardParam: "Adding_buttons" },
+    { src: "image/cards/carte_7.svg", cardParam: "Adding_placeholder_images" },
+    { src: "image/cards/carte_8.svg", cardParam: "Simple_text" },
+    { src: "image/cards/carte_9.svg", cardParam: "Information_organization" },
+    { src: "image/cards/carte_10.svg", cardParam: "Mobile_version" },
+    { src: "image/cards/carte_V.svg", cardParam: "Clean_alignments" },
+    { src: "image/cards/carte_Q.svg", cardParam: "Click_path" },
+    { src: "image/cards/carte_K.svg", cardParam: "Realistic_mockup" },
+    { src: "image/cards/carte_1.svg", cardParam: "Simple_prototype" },
+    { src: "image/cards/carte_p1.svg", cardParam: "Power_up1" },
+    { src: "image/cards/carte_p2.svg", cardParam: "Power_up2" },
+    { src: "image/cards/carte_p3.svg", cardParam: "Power_up3" },
+    { src: "image/cards/carte_p4.svg", cardParam: "Power_up4" },
+    { src: "image/cards/carte_joker.svg", cardParam: "Joker" }
+];
+
+const container = document.getElementById('cards-container');
+
+cardsData.forEach(card => {
+    const div = document.createElement('div');
+    div.className = 'card-preview';
+    div.style.cursor = 'pointer';
+    div.innerHTML = `<img src="${card.src}" alt="Card preview">`;
+    div.onclick = () => {
+        window.location.href = `cards.php?card=${card.cardParam}`;
+    };
+    container.appendChild(div);
+});
+</script>
+
 </body>
-
 </html>

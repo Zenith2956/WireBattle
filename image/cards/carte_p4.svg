@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   viewBox="0 0 240 336"
+   height="336"
+   width="240"
+   xml:space="preserve"
+   id="svg2"
+   version="1.1"><metadata
+     id="metadata8"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+     id="defs6"><clipPath
+       id="clipPath18"
+       clipPathUnits="userSpaceOnUse"><path
+         id="path16"
+         d="M 0,252 H 180 V 0 H 0 Z" /></clipPath></defs><g
+     transform="matrix(1.3333333,0,0,-1.3333333,0,336)"
+     id="g10"><g
+       id="g12"><g
+         clip-path="url(#clipPath18)"
+         id="g14"><g
+           transform="translate(171.496)"
+           id="g20"><path
+             id="path22"
+             style="fill:#c688ba;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             d="m 0,0 h -162.992 c -4.697,0 -8.504,3.807 -8.504,8.504 v 234.992 c 0,4.697 3.807,8.504 8.504,8.504 L 0,252 c 4.697,0 8.504,-3.807 8.504,-8.504 V 8.504 C 8.504,3.807 4.697,0 0,0" /></g></g></g><text
+       id="text28"
+       style="font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7px;font-family:'Courier New';-inkscape-font-specification:CourierNewPS-BoldMT;writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(0.86805714,0,0,-1,13.4248,120.585)"><tspan
+         id="tspan24"
+         y="0"
+         x="0 4.1999998 8.3999996 12.6 16.799999 21 25.200001 29.4 33.599998 37.799999 42 46.200001 50.400002 54.599998 58.799999 63 67.199997 71.400002 75.599998 79.800003 84 88.199997 92.400002 96.599998 100.8 105 109.2 113.4 117.6 121.8 126 130.2 134.39999 138.60001 142.8 147 151.2 155.39999 159.60001 163.8 168 172.2 176.39999">Allows the player to play two cards in one </tspan><tspan
+         id="tspan26"
+         y="8.3999996"
+         x="4.1999998 8.3999996 12.6 16.799999 21 25.200001 29.4 33.599998 37.799999 42 46.200001 50.400002 54.599998 58.799999 63 67.199997 71.400002 75.599998 79.800003 84 88.199997 92.400002 96.599998 100.8 105 109.2 113.4 117.6 121.8 126 130.2 134.39999 138.60001 142.8 147 151.2 155.39999 159.60001 163.8 168">turn and add their scores for the trick.</tspan></text>
+<text
+       id="text34"
+       style="font-variant:normal;font-weight:900;font-stretch:normal;font-size:15px;font-family:'8 Heavy';writing-mode:lr-tb;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       transform="matrix(1,0,0,-1,66.9229,149.168)"><tspan
+         id="tspan30"
+         y="0"
+         x="0 11.25 23.775 33.330002 45.855">Card </tspan><tspan
+         id="tspan32"
+         y="16.004999"
+         x="-37.724998 -28.08 -17.985001 -0.95999998 11.535 16.889999 28.334999 40.860001 48.240002 53.595001 63.689999 75.135002 77.834999">combination :</tspan></text>
+</g></svg>
