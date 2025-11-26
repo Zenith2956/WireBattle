@@ -1,47 +1,47 @@
 # WireBattle
 
-🃏 Bataille — “Wireframe evolution” 
+🃏 Battle — “Wireframe evolution”
 
-deck of 13x4 cards = 54 Cards 
+deck of 13×4 cards = 54 Cards
 
-2 — Croquis rapide 
-A simple drawing to present the idea. 
+2 — Quick sketch
+A simple drawing to present the idea.
 
-3 — Découpage de la page 
-we separate the Up/Middle/Down. 
+3 — Page breakdown
+We separate the Top/Middle/Bottom.
 
-4 — Placement des blocs 
-On met le menu, le texte, l’image, etc. 
+4 — Block placement
+We place the menu, text, image, etc.
 
-5 — Ajout des colonnes 
-Mise en place d’une structure plus organisée. 
+5 — Adding columns
+Setting up a more organized structure.
 
-6 — Ajout des boutons et liens 
-On montre où l’utilisateur peut cliquer. 
+6 — Adding buttons and links
+We show where the user can click.
 
-7 — Mise en place des images fictives 
-Cases grises pour représenter des photos. 
+7 — Adding placeholder images
+Grey boxes to represent photos.
 
-8 — Texte simple et titres 
-On met de vrais titres et du faux texte. 
+8 — Simple text and headings
+We add real titles and placeholder text.
 
-9 — Organisation des informations 
-Tout est mieux rangé et plus clair. 
+9 — Information organization
+Everything is better arranged and clearer.
 
-10 — Version téléphone (responsive) 
-On adapte la page pour les petits écrans. 
+10 — Mobile version (responsive)
+We adapt the page for small screens.
 
-Valet — Alignements et espacements propres 
-Le wireframe devient plus propre et lisible. 
+Jack — Clean alignments and spacing
+The wireframe becomes cleaner and more readable.
 
-Dame — Chemin du clic (parcours simple) 
-On montre comment l’utilisateur se déplace entre les pages. 
+Queen — Click path (simple flow)
+We show how the user navigates between pages.
 
-Roi — Maquette réaliste 
-Les images sont placés et les textes rédigés. 
+King — Realistic mockup
+Images are placed and the texts are written.
 
-Ace — Prototype simple 
-On peut cliquer et tester comme si c’était une vraie app. 
+Ace — Simple prototype
+You can click and test it as if it were a real app.
 
 
 
