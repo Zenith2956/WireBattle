@@ -6,11 +6,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>WireBattle – Cards</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
     <style>
-        /* Style des cartes (list-group-item améliorés) */
         #sidebar .list-group-item {
             border-radius: 10px;
             margin-bottom: 6px;
@@ -24,7 +29,6 @@
             background-color: #f0f0f0;
         }
 
-        /* Carte sélectionnée */
         #sidebar .list-group-item.active-card {
             background-color: #ffc107 !important;
             color: black !important;
@@ -33,7 +37,6 @@
             border-color: #ffca2c;
         }
 
-        /* Animation du texte central */
         .fade-text {
             animation: fadeIn 0.4s ease-in-out;
         }
@@ -54,43 +57,36 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-dark sticky-top border-bottom" data-bs-theme="dark">
+     <nav class="navbar navbar-expand-md sticky-top border-bottom" style="background-color:#c688bb; min-width: 8%;">
         <div class="container">
             <a class="navbar-brand d-md-none" href="#">
                 <svg class="bi" width="24" height="24" aria-hidden="true">
                     <use xlink:href="#aperture"></use>
                 </svg>
-                WireBattle
+                <img src="image/logow.svg" alt="WireBattle Logo" width="50% ">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
                 aria-controls="offcanvas" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasLabel">WireBattle</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav flex-grow-1 justify-content-between">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html" aria-label="Home">Home</a>
+                    <ul class="navbar-nav flex-grow-1 justify-content-center" style="gap: 25%;">
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="rule.html" style="font-size:130%; color:#eace3b;">Rules</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="rule.html">Rules</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="cards.php">Cards</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" aria-label="Cart">
-                                <svg class="bi" width="24" height="24" aria-hidden="true">
-                                    <use xlink:href="#cart"></use>
-                                </svg>
+
+                        <li class="nav-item p-1">
+                            <a class="nav-link d-md-none" href="index.html"
+                                style="font-size:130%; text-align:left; color:#eace3b;">Home</a>
+
+                            <a class="nav-link d-none d-md-flex justify-content-center align-items-center"
+                                href="index.html" style="padding:0;">
+                                <img src="image/logow.svg" alt="Logo" style="height:60px; width:auto; display:block;">
                             </a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <a class="nav-link" href="cards.php" style="font-size:130%; color:#eace3b;">Cards</a>
                         </li>
                     </ul>
                 </div>
@@ -102,7 +98,7 @@
 
             <!-- Sidebar -->
             <div class="col-3">
-                <div id="sidebar" class="list-group">
+                <div id="sidebar" class="list-group" style="position: relative;">
 
                     <a href="#" class="list-group-item list-group-item-action" data-action="Quick_sketch">Quick sketch</a>
                     <a href="#" class="list-group-item list-group-item-action" data-action="Page_breakdown">Page breakdown</a>
@@ -115,7 +111,7 @@
                     <a href="#" class="list-group-item list-group-item-action" data-action="Mobile_version">Mobile version</a>
                     <a href="#" class="list-group-item list-group-item-action" data-action="Clean_alignments">Clean alignments and spacing</a>
                     <a href="#" class="list-group-item list-group-item-action" data-action="Click_path">Click path</a>
-                    <a href="#" class="list-group-item list-group-item-action" data-action="Realistic_mockup">Realistic mockup</a>                    
+                    <a href="#" class="list-group-item list-group-item-action" data-action="Realistic_mockup">Realistic mockup</a>
                     <a href="#" class="list-group-item list-group-item-action" data-action="Simple_prototype">Simple prototype</a>
                     <a href="#" class="list-group-item list-group-item-action" data-action="Joker_1">Joker 1</a>
                     <a href="#" class="list-group-item list-group-item-action" data-action="Joker_2">Joker 2</a>
@@ -125,6 +121,13 @@
 
             <!-- Zone centrale -->
             <div class="col-9">
+                <div class="shadow-sm mx-auto p-20" style="width: 75%; height: 100%; min-height: 300px;
+                            border-radius: 21px 21px 0 0;
+                            background-image: url('image/cards/carte_test.png');
+                            background-size: contain;
+                            background-position: center;
+                            background-repeat: no-repeat;">
+                </div>
                 <div class="card shadow p-3" id="texteCentral">
                     <h4 class="card-title">Description</h4>
                     <p class="card-text fs-5">Select something from the left.</p>

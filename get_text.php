@@ -8,6 +8,7 @@ if (isset($_POST['action'])) {
 
         case 'Quick_sketch':
             $texte = "2- \n The Quick Sketch allows you to make a fast drawing to visualize an idea.";
+            
             break;
 
         case 'Page_breakdown':
