@@ -79,7 +79,7 @@ margin-bottom: 20px;
         <img src="image/logow.svg" alt="WireBattle Logo" class="hero-logo">
         <div class="d-flex justify-content-center flex-wrap">
             <a href="rule.html" class="btn btn-warning text-dark">View Rules</a>
-            <a href="cards.html" class="btn btn-light text-dark">View Cards</a>
+            <a href="cards.php" class="btn btn-light text-dark">View Cards</a>
         </div>
     </section>
 
@@ -122,7 +122,7 @@ cardsData.forEach(card => {
     div.style.cursor = 'pointer';
     div.innerHTML = `<img src="${card.src}" alt="Card preview">`;
     div.onclick = () => {
-        window.location.href = `cards.html?card=${card.cardParam}`;
+        window.location.href = `cards.php?card=${card.cardParam}`;
     };
     container.appendChild(div);
 });
