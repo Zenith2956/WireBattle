@@ -49,7 +49,7 @@
     },
     "Simple_prototype": {
         "texte": "A- A Simple Prototype allows quick interaction testing. You can check navigation flow before final design.",
-        "image": "image/cards/carte_1.svg"
+        "image": "image/cards/carte_a.svg"
     },
     "Power_up1": {
         "texte": "Allows the player to take a random card from an opponent's stack.",
