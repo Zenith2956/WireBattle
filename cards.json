@@ -1,74 +1,74 @@
 {
-    "Quick_sketch": {
-        "texte": "2- The Quick Sketch allows you to quickly draw ideas to visualize concepts. It's a simple and fast way to start your wireframe journey.",
-        "image": "image/cards/carte_2.svg"
-    },
-    "Page_breakdown": {
-        "texte": "3- The Page Breakdown details the structure and content of a page. Here you organize headers, footers, and main sections.",
-        "image": "image/cards/carte_3.svg"
-    },
-    "Block_placement": {
-        "texte": "4- Block Placement helps you arrange visual elements logically. Think of it as placing pieces of content in their right spot.",
-        "image": "image/cards/carte_4.svg"
-    },
-    "Adding_columns": {
-        "texte": "5- Adding Columns creates a structured layout. This allows text and images to align neatly and improves readability.",
-        "image": "image/cards/carte_5.svg"
-    },
-    "Adding_buttons": {
-        "texte": "6- Adding Buttons and Links makes your wireframe interactive. You can plan user actions and navigation between pages.",
-        "image": "image/cards/carte_6.svg"
-    },
-    "Adding_placeholder_images": {
-        "texte": "7- Placeholder Images give a visual idea of content placement. They help you plan where images will appear without using final graphics.",
-        "image": "image/cards/carte_7.svg"
-    },
-    "Simple_text": {
-        "texte": "8- Simple Text and Headings structure information. Focus on clarity and hierarchy to guide users through your page.",
-        "image": "image/cards/carte_8.svg"
-    },
-    "Information_organization": {
-        "texte": "9- Organizing Information makes your page easier to understand. Group related content and prioritize important elements.",
-        "image": "image/cards/carte_9.svg"
-    },
-    "Mobile_version": {
-        "texte": "10- The Mobile Version ensures your wireframe works on smartphones. Plan for smaller screens and touch interactions.",
-        "image": "image/cards/carte_10.svg"
-    },
-    "Clean_alignments": {
-        "texte": "J- Clean Alignments and Spacing make your design polished. Proper spacing guides the eye and improves readability.",
-        "image": "image/cards/carte_j.svg"
-    },
-    "Click_path": {
-        "texte": "Q- The Click Path represents the user's journey between pages. It helps anticipate user actions and navigation.",
-        "image": "image/cards/carte_queen.svg"
-    },
-    "Realistic_mockup": {
-        "texte": "K- A Realistic Mockup shows the final look of your design. It helps you visualize how all elements come together.",
-        "image": "image/cards/carte_k.svg"
-    },
-    "Simple_prototype": {
-        "texte": "A- A Simple Prototype allows quick interaction testing. You can check navigation flow before final design.",
-        "image": "image/cards/carte_a.svg"
-    },
-    "Power_up1": {
-        "texte": "Allows the player to take a random card from an opponent's deck.",
-        "image": "image/cards/carte_p1.svg"
-    },
-    "Power_up2": {
-        "texte": "Allows the player to swap their entire deck with another player's.",
-        "image": "image/cards/carte_p2.svg"
-    },
-    "Power_up3": {
-        "texte": "Doubles the value of the card played when calculating the trick's winner.",
-        "image": "image/cards/carte_p3.svg"
-    },
-    "Power_up4": {
-        "texte": "Allows the player to play two cards in one turn and add their scores for the trick.",
-        "image": "image/cards/carte_p4.svg"
-    },
-    "Joker": {
-        "texte": "When placed, allows the player to win the trick and take a Power-up card.",
-        "image": "image/cards/carte_joker.svg"
-    }
+"Quick_sketch": {
+"texte": "The Quick Sketch phase allows you to rapidly explore and visualize early ideas before committing to structured wireframes.\nIt focuses on freehand drawings—often rough and imperfect—that help you clarify concepts, compare different layout possibilities, and identify the most effective direction.\nThis step accelerates creativity and decision-making by keeping the process lightweight, flexible, and open to change.\nQuick sketches also serve as a visual communication tool, allowing the team to discuss ideas, challenge assumptions, and refine solutions before moving to more formal designs.",
+"image": "image/cards/carte_2.svg"
+},
+"Page_breakdown": {
+"texte": "The Page Breakdown phase defines the overall structure and layout of a page.\nThis step organizes headers, footers, main sections, and content zones, helping to create a logical hierarchy and visual flow.\nIt ensures each part of the page has a clear purpose and prepares the groundwork for placing individual elements effectively.",
+"image": "image/cards/carte_3.svg"
+},
+"Block_placement": {
+"texte": "Block Placement involves arranging visual and content elements in a logical and coherent order.\nIt acts like a blueprint, allowing you to see how different sections interact, identify gaps or redundancies, and optimize layout before moving to more detailed design.",
+"image": "image/cards/carte_4.svg"
+},
+"Adding_columns": {
+"texte": "Adding Columns introduces a structured grid to the page, aligning text, images, and other elements consistently.\nThis improves readability, balances content visually, and ensures a professional, organized layout across all sections.",
+"image": "image/cards/carte_5.svg"
+},
+"Adding_buttons": {
+"texte": "Adding Buttons and Links defines user interactions and navigation opportunities.\nBy placing these elements in your wireframe, you plan how users will move through the product, which actions are prioritized, and how key functionality is highlighted.",
+"image": "image/cards/carte_6.svg"
+},
+"Adding_placeholder_images": {
+"texte": "Placeholder Images give a visual representation of where actual images or media will appear.\nThey help communicate the intended layout, maintain proportions, and ensure the page design accommodates visual content effectively, without needing final graphics.",
+"image": "image/cards/carte_7.svg"
+},
+"Simple_text": {
+"texte": "Simple Text and Headings structure your content clearly.\nFocus on hierarchy, spacing, and labeling to guide the user's attention and make information easy to scan, while maintaining a clean and readable wireframe.",
+"image": "image/cards/carte_8.svg"
+},
+"Information_organization": {
+"texte": "Organizing Information improves user comprehension by grouping related content, prioritizing key elements, and establishing a logical flow.\nThis step helps users understand the page quickly and reduces cognitive load.",
+"image": "image/cards/carte_9.svg"
+},
+"Mobile_version": {
+"texte": "The Mobile Version ensures your wireframe adapts to smaller screens and touch interactions.\nIt addresses responsive design, adjusts layout proportions, and considers usability challenges specific to smartphones and tablets.",
+"image": "image/cards/carte_10.svg"
+},
+"Clean_alignments": {
+"texte": "Clean Alignments and Spacing create a polished and professional layout.\nProper margins, consistent spacing, and aligned elements guide the eye naturally, improve readability, and enhance overall visual coherence.",
+"image": "image/cards/carte_j.svg"
+},
+"Click_path": {
+"texte": "The Click Path illustrates the user's journey through pages, showing possible interactions and navigation flow.\nMapping these paths helps anticipate user actions, identify potential friction points, and optimize the experience.",
+"image": "image/cards/carte_queen.svg"
+},
+"Realistic_mockup": {
+"texte": "A Realistic Mockup presents a near-final view of the design, combining layout, content, and visual styling.\nThis allows stakeholders to see how elements interact, provides context for development, and helps validate design decisions before full implementation.",
+"image": "image/cards/carte_k.svg"
+},
+"Simple_prototype": {
+"texte": "A Simple Prototype enables early interaction testing of the wireframe.\nUsers can navigate between screens, and you can validate flow, interaction design, and usability before investing time in high-fidelity visuals.",
+"image": "image/cards/carte_a.svg"
+},
+"Power_up1": {
+"texte": "Allows the player to take a random card from an opponent's deck.",
+"image": "image/cards/carte_p1.svg"
+},
+"Power_up2": {
+"texte": "Allows the player to swap their entire deck with another player's.",
+"image": "image/cards/carte_p2.svg"
+},
+"Power_up3": {
+"texte": "Doubles the value of the card played when calculating the trick's winner.",
+"image": "image/cards/carte_p3.svg"
+},
+"Power_up4": {
+"texte": "Allows the player to play two cards in one turn and add their scores for the trick.",
+"image": "image/cards/carte_p4.svg"
+},
+"Joker": {
+"texte": "When placed, allows the player to win the trick and take a Power-up card.",
+"image": "image/cards/carte_joker.svg"
+}
 }
