@@ -52,11 +52,11 @@
         "image": "image/cards/carte_a.svg"
     },
     "Power_up1": {
-        "texte": "Allows the player to take a random card from an opponent's stack.",
+        "texte": "Allows the player to take a random card from an opponent's deck.",
         "image": "image/cards/carte_p1.svg"
     },
     "Power_up2": {
-        "texte": "Allows the player to swap their entire deck (card stack) with another player's.",
+        "texte": "Allows the player to swap their entire deck with another player's.",
         "image": "image/cards/carte_p2.svg"
     },
     "Power_up3": {
