@@ -95,11 +95,8 @@ body { background-color: #f8f9fa; font-family: 'Courier New', monospace; }
 </div>
 
 <script>
-
-    const params = new URLSearchParams(window.location.search);
+const params = new URLSearchParams(window.location.search);
 const selectedCard = params.get('card') || 'Quick_sketch';
-
-console.log("Carte sélectionnée :", selectedCard);
 
 const cardImage = document.getElementById("cardImage");
 const zoneTexte = document.querySelector(".card-text");
@@ -108,33 +105,36 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const cardOptions = Array.from(cardSelect.options);
 
-
 let currentIndex = cardOptions.findIndex(opt => opt.value === selectedCard);
 if (currentIndex === -1) currentIndex = 0;
 
+let cardsData = {};
+
+fetch("cards.json")
+    .then(resp => resp.json())
+    .then(json => {
+        cardsData = json;
+        loadCard(currentIndex);
+    });
+
 function loadCard(index) {
-    const action = cardOptions[index].value;
+    const key = cardOptions[index].value;
     cardSelect.selectedIndex = index;
 
-    fetch("get_text.php", {
-        method: "POST",
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: "action=" + encodeURIComponent(action)
-    })
-    .then(response => response.json())
-    .then(data => {
-        zoneTexte.classList.remove("fade-in");
-        cardImage.classList.remove("fade-in");
-        void zoneTexte.offsetWidth;
-        void cardImage.offsetWidth;
+    const data = cardsData[key];
 
-        zoneTexte.textContent = data.texte;
-        cardImage.style.backgroundImage = `url('${data.image}')`;
+    if (!data) return;
 
-        zoneTexte.classList.add("fade-in");
-        cardImage.classList.add("fade-in");
-    })
-    .catch(error => console.error("Error:", error));
+    zoneTexte.classList.remove("fade-in");
+    cardImage.classList.remove("fade-in");
+    void zoneTexte.offsetWidth;
+    void cardImage.offsetWidth;
+
+    zoneTexte.textContent = data.texte;
+    cardImage.style.backgroundImage = `url('${data.image}')`;
+
+    zoneTexte.classList.add("fade-in");
+    cardImage.classList.add("fade-in");
 }
 
 cardSelect.addEventListener("change", () => {
@@ -151,10 +151,6 @@ nextBtn.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % cardOptions.length;
     loadCard(currentIndex);
 });
-
-// Charge la carte initiale
-loadCard(currentIndex);
-
 </script>
 
 </body>
