@@ -1,7 +1,5 @@
-<?php
-// Récupérer la carte sélectionnée depuis l'URL, sinon utiliser la première du dropdown
-$selectedCard = isset($_GET['card']) ? $_GET['card'] : 'Quick_sketch';
-?>
+<!-- Récupérer la carte sélectionnée depuis l'URL, sinon utiliser la première du dropdown -->
+
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
 <head>
@@ -44,7 +42,7 @@ body { background-color: #f8f9fa; font-family: 'Courier New', monospace; }
             <div class="offcanvas-body d-flex flex-column align-items-center pt-5">
                 <ul class="navbar-nav w-100 text-center" style="gap: 20px;">
                     <li class="nav-item"><a class="nav-link" href="rule.html" style="font-size:130%; color:#eace3b;">Rules</a></li>
-                    <li class="nav-item"><a class="nav-link" href="cards.php" style="font-size:130%; color:#eace3b;">Cards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cards.html" style="font-size:130%; color:#eace3b;">Cards</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html" style="font-size:130%; color:#eace3b;">Home</a></li>
                 </ul>
             </div>
@@ -53,7 +51,7 @@ body { background-color: #f8f9fa; font-family: 'Courier New', monospace; }
         <div class="d-none d-md-flex justify-content-between align-items-center w-100 py-2 px-5">
             <a class="nav-link" href="rule.html" style="font-size:130%; color:#eace3b;">Rules</a>
             <a class="navbar-brand mx-3" href="index.html"><img src="image/logow.svg" alt="WireBattle Logo" style="height:60px;"></a>
-            <a class="nav-link" href="cards.php" style="font-size:130%; color:#eace3b;">Cards</a>
+            <a class="nav-link" href="cards.html" style="font-size:130%; color:#eace3b;">Cards</a>
         </div>
     </div>
 </nav>
@@ -97,14 +95,22 @@ body { background-color: #f8f9fa; font-family: 'Courier New', monospace; }
 </div>
 
 <script>
+
+    const params = new URLSearchParams(window.location.search);
+const selectedCard = params.get('card') || 'Quick_sketch';
+
+console.log("Carte sélectionnée :", selectedCard);
+
 const cardImage = document.getElementById("cardImage");
 const zoneTexte = document.querySelector(".card-text");
 const cardSelect = document.getElementById("cardSelect");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const cardOptions = Array.from(cardSelect.options);
-let currentIndex = cardOptions.findIndex(opt => opt.value === "<?php echo $selectedCard; ?>");
-if(currentIndex === -1) currentIndex = 0;
+
+
+let currentIndex = cardOptions.findIndex(opt => opt.value === selectedCard);
+if (currentIndex === -1) currentIndex = 0;
 
 function loadCard(index) {
     const action = cardOptions[index].value;
@@ -148,6 +154,7 @@ nextBtn.addEventListener("click", () => {
 
 // Charge la carte initiale
 loadCard(currentIndex);
+
 </script>
 
 </body>
